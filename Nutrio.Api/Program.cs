@@ -1,4 +1,6 @@
 
+using System.Text.Json.Serialization;
+
 namespace Nutrio.Api
 {
     public class Program
@@ -25,24 +27,13 @@ namespace Nutrio.Api
 
             app.UseAuthorization();
 
-            var summaries = new[]
-            {
-                "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-            };
-
-            app.MapGet("/weatherforecast", (HttpContext httpContext) =>
-            {
-                var forecast = Enumerable.Range(1, 5).Select(index =>
-                    new WeatherForecast
-                    {
-                        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                        TemperatureC = Random.Shared.Next(-20, 55),
-                        Summary = summaries[Random.Shared.Next(summaries.Length)]
-                    })
-                    .ToArray();
-                return forecast;
-            })
-            .WithName("GetWeatherForecast");
+      
+            //конвертацыя енумыв в стрынги при передаче через API
+            builder.Services.AddControllers()
+             .AddJsonOptions(options =>
+              {
+                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+             });
 
             app.Run();
         }

@@ -4,12 +4,14 @@ using System.Text;
 
 namespace Nutrio.Domain.Entities
 {
-    internal class DayCounter
+    public class DayCounter
     {
         //keys
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ProductId { get; set; }
+        public Users User { get; set; } = null!;
+        public Products Product { get; set; } = null!;
 
         //others
         public DateTime Date {  get; set; }

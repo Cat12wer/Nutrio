@@ -4,20 +4,15 @@ using System.Text;
 
 namespace Nutrio.Domain.Entities
 {
-    public class Products
+    internal class DauCounterDto
     {
-        //keys
-        public Guid Id { get; set; }
-
-        //Others
+        public int Id { get; set; }
         public string ProductName { get; set; }
+        public int Quantity { get; set; }
         public decimal Calories { get; set; }
+        public decimal Protein { get; set; }
         public decimal Fat { get; set; }
         public decimal Carbs { get; set; }
-        public decimal Protein { get; set; }
-        public decimal  Fiber { get; set; }
-        public string? PictureURL { get; set; }
-        
-        
+        public string MealType { get; set; }
     }
 }

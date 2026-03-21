@@ -4,15 +4,17 @@ using System.Text;
 
 namespace Nutrio.Domain.Entities
 {
-    internal class Bodymetrix
+    public class Bodymetrix
     {
 
         //keys
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
 
+        public Users User { get; set; } = null!;
+
         //others
-        public decimal BodyMassIndex { get; set; }
+        public decimal? BodyMassIndex { get; set; }
         public decimal Weight { get; set; }
         public decimal? FatProcent { get; set; }
         public decimal? Height { get; set; }

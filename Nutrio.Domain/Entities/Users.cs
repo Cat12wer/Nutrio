@@ -4,10 +4,12 @@ using System.Text;
 
 namespace Nutrio.Domain.Entities
 {
-    internal class Users
+    public class Users
     {
         //keys
         public Guid Id { get; set; }
+        public ICollection<DayCounter> DayCounters { get; set; } = new List<DayCounter>();
+        public ICollection<Bodymetrix> BodymetrixRecords { get; set; } = new List<Bodymetrix>();
 
         //others
         public string Name { get; set; }
