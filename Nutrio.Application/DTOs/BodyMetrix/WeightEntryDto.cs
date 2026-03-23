@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nutrio.Application.DTOs.BodyMetrix
 {
-    internal class WeoghtEntryDto
+    internal class WeightEntryDto
     {
         public DateTime Date { get; set; }
         public decimal Weight { get; set; }

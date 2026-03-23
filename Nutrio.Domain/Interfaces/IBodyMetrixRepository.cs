@@ -2,7 +2,7 @@
 
 namespace Nutrio.Domain.Interfaces
 {
-    internal interface IProductIRepositor : IRepository<Products>
+    public interface IBodyMetrixRepository : IRepository<Bodymetrix>
     {
 
     }

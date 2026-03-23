@@ -2,7 +2,7 @@
 
 namespace Nutrio.Domain.Interfaces
 {
-    internal interface IUserRepository : IRepository<Users>
+    public interface IUserRepository : IRepository<Users>
     {
         
     }

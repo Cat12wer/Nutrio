@@ -8,8 +8,8 @@ namespace Nutrio.Domain.Entities
     {
         //keys
         public Guid Id { get; set; }
-        public ICollection<DayCounter> DayCounters { get; set; } = new List<DayCounter>();
-        public ICollection<Bodymetrix> BodymetrixRecords { get; set; } = new List<Bodymetrix>();
+        public virtual ICollection<DayCounter> DayCounters { get; set; } = new List<DayCounter>();
+        public virtual ICollection<Bodymetrix> BodymetrixRecords { get; set; } = new List<Bodymetrix>();
 
         //others
         public string Name { get; set; }

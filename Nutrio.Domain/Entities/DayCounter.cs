@@ -24,6 +24,7 @@ namespace Nutrio.Domain.Entities
             Snack1,
             Snack2 
         }
+        public MealType TypeMeal { get; set; }
         public decimal CaloriesAtNow {  get; set; }
         public decimal CarbsAtNow { get; set; } 
         public decimal ProteinAtNow { get;set; }

@@ -7,8 +7,8 @@ namespace Nutrio.Domain.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IUserRepository User { get; }
-        IProductIRepositor Products { get; }
-        IBodyMetrixIRepository Bodymetrix { get; }
+        IProductIRepository Products { get; }
+        IBodyMetrixRepository Bodymetrix { get; }
         IDayCounterRepository DayCounters { get; }
 
         Task<int> SaveChangesAsync();
