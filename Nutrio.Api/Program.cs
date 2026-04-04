@@ -1,5 +1,6 @@
 
 using System.Text.Json.Serialization;
+using Nutrio.Infrastructure;
 
 namespace Nutrio.Api
 {

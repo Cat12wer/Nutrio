@@ -11,16 +11,13 @@ namespace Nutrio.Infrastructure.Repositories
 
         // Властивості для кожного репозиторію
         public IUserRepository User { get; private set; }
-        public IProductIRepository Products { get; private set; } // Виправив "Repositоr" на "Repository"
+        public IProductIRepository Products { get; private set; } 
         public IBodyMetrixRepository Bodymetrix { get; private set; }
         public IDayCounterRepository DayCounters { get; private set; }
 
         public UnitOfWork(NutrioDbContext context)
         {
             _context = context;
-
-            // Ініціалізуємо конкретні репозиторії
-            // Якщо вони просто наслідують GenericRepository, можна зробити так:
             User = new UserRepository(_context);
             Products = new ProductRepository(_context);
             Bodymetrix = new BodyMetrixRepository(_context);
