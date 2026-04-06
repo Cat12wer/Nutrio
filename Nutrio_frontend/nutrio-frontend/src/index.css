@@ -1,0 +1,36 @@
+/* src/index.css */
+
+:root {
+  --green:    #6FA83C;
+  --green-l:  #E8F3DC;
+  --orange:   #D05A42;
+  --orange-l: #FAE8E4;
+  --blue:     #3B529B;
+  --blue-l:   #E0E5F4;
+  --bg:       #F2F0EB;
+  --surface:  #FAFAF8;
+  --surface2: #F5F3EE;
+  --ink:      #1A1A1A;
+  --ink2:     #3D3D3D;
+  --muted:    #8A887E;
+  --border:   #E0DDD5;
+  --radius:   12px;
+  --radius-s: 8px;
+  --sidebar:  240px;
+  --tr: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html, body { 
+  height: 100%; 
+  font-family: 'DM Sans', sans-serif; 
+  background: var(--bg); 
+  color: var(--ink); 
+  -webkit-font-smoothing: antialiased; 
+  overflow-x: hidden; /* замість overflow: hidden, щоб працював скрол на сторінках */
+}

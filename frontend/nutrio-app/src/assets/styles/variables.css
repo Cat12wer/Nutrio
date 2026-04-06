@@ -1,9 +1,0 @@
-:root {
-    --bg: #F7F6F3; --surface: #FFFFFF; --surface2: #F0EEE9;
-    --border: #E5E2DA; --text: #1A1916; --text2: #6B6860; --text3: #A8A49C;
-    --accent: #2D6A4F; --accent-light: #D8EDDF;
-    --amber: #C17A2B; --red: #C0392B; --red-light: #FDECEA;
-    --blue: #2563A8;
-    --font: 'DM Sans', sans-serif; --mono: 'DM Mono', monospace;
-    --r: 12px; --r-sm: 8px;
-  }
